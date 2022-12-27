@@ -253,7 +253,7 @@ class LocalDataset(object):
         # Filter out unused classes and annotations of a different type
         annotations = data["annotations"]
         if self.classes is not None:
-            annotations = [a for a in annotations if a["name"] in self.classes and self.annotation_type in a]
+            annotations = [a for a in annotations if a["name"] in self.classes and any(self.annotation_type in k for k in a)]
         return {
             "image_id": index,
             "image_path": str(self.images_path[index]),
