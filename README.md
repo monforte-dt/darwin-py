@@ -16,9 +16,10 @@ Main functions are (but not limited to):
 Support tested for python 3.8.
 
 ## Installation
+Install our corrected darwin-py version:
 
 ```
-pip install darwin-py
+pip3 install git+https://github.com/monforte-dt/darwin-py.git@bugfix/complex_polygons
 ```
 
 You can now type `darwin` in your terminal and access the command line interface.
